@@ -1,0 +1,77 @@
+.top-bar { 
+  background: #1e5c1a;
+ }
+.top-bar-inner { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  height: 36px; }
+
+.top-bar-social {
+   display: flex; 
+   gap: 8px;  }
+
+.top-bar img { 
+   width: 18px;
+  height: 18px;
+  object-fit: contain;
+  border-radius: 4px;
+  object-fit: contain;
+  background: transparent;
+ }
+.social-link { 
+   display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center; 
+  justify-content: center; 
+  transition: background 0.2s; }
+
+.social-link:hover { background: rgba(255,255,255,0.15); color: white; }
+.top-bar-links { display: flex; gap: 20px; }
+.top-bar-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 12px; font-weight: 500; }
+.top-bar-links a:hover { color: white; }
+
+.main-header { background: white; border-bottom: 2px solid #f3f4f6; padding: 12px 0; }
+.main-header-inner { display: flex; align-items: center; gap: 24px; }
+
+.site-logo { display: flex; flex-direction: column; text-decoration: none; flex-shrink: 0; line-height: 1; }
+.logo-pharma { font-size: 24px; font-weight: 800; font-style: italic; font-family: Georgia, serif; color: #3aaa35; }
+.logo-family { font-size: 28px; font-weight: 900; font-style: italic; font-family: Georgia, serif; color: #cc0075; }
+
+.search-bar { flex: 1; display: flex; border: 2px solid #3aaa35; border-radius: 6px; overflow: hidden; max-width: 560px; }
+.search-bar input { flex: 1; padding: 10px 16px; border: none; outline: none; font-size: 14px; font-family: inherit; color: #111827; background: white; }
+.search-bar input::placeholder { color: #9ca3af; }
+.search-btn { background: #3aaa35; border: none; padding: 0 16px; cursor: pointer; color: white; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+.search-btn:hover { background: #2d8a29; }
+
+.header-icons { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.header-icon { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px; color: #374151; text-decoration: none; transition: background 0.2s, color 0.2s; }
+.header-icon:hover { background: #f0fdf0; color: #3aaa35; }
+
+.hamburger { display: none; background: none; border: 1px solid #e5e7eb; border-radius: 8px; width: 40px; height: 40px; font-size: 18px; cursor: pointer; color: #374151; align-items: center; justify-content: center; transition: background 0.2s; }
+.hamburger:hover { background: #f9fafb; }
+
+.cat-nav { background: #3aaa35; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 6px rgba(58,170,53,0.2); }
+.cat-nav-inner { display: flex; align-items: center; overflow-x: auto; scrollbar-width: none; }
+.cat-nav-inner::-webkit-scrollbar { display: none; }
+.cat-nav-link { display: inline-flex; align-items: center; padding: 11px 14px; font-size: 12.5px; font-weight: 700; color: rgba(255,255,255,0.9); text-decoration: none; white-space: nowrap; text-transform: uppercase; letter-spacing: 0.04em; border-right: 1px solid rgba(255,255,255,0.15); transition: background 0.2s; }
+.cat-nav-link:hover, .cat-nav-link.active { background: rgba(0,0,0,0.12); color: white; }
+.cat-nav-link.highlight { background: #cc0075; border-right-color: rgba(255,255,255,0.2); }
+.cat-nav-link.highlight:hover { background: #a8005f; }
+
+@media (max-width: 900px) {
+  .top-bar { display: none; }
+  .main-header-inner { flex-wrap: wrap; gap: 12px; }
+  .search-bar { order: 3; flex: 1 1 100%; max-width: 100%; }
+  .hamburger { display: flex; }
+  .cat-nav { display: none; position: static; }
+  .cat-nav.open { display: block; }
+  .cat-nav-inner { flex-direction: column; }
+  .cat-nav-link { width: 100%; padding: 12px 20px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); }
+  .cat-nav-link.highlight { margin: 4px 12px; width: calc(100% - 24px); border-radius: 4px; justify-content: center; border-bottom: none; }
+}
