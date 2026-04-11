@@ -68,13 +68,13 @@ export default function Home() {
             <h2>Nos Catégories</h2>
             <Link to="/products" className="section-link">Voir tout →</Link>
           </div>
-          <div className="categories-grid">
+          <div className="categories-scroll">
             {categories.map(cat => (
               <Link key={cat.id} to={`/products?category=${cat.id}`} className="category-card" style={{ background: cat.color }}>
-                 {cat.image ? <img src={cat.image} alt={cat.name} className="category-card-image" />
-    : <span className="category-initial">{cat.name.charAt(0)}</span>
-  }
-                <span className="category-initial">{cat.name.charAt(0)}</span>
+                {cat.image
+                  ? <img src={cat.image} alt={cat.name} className="category-card-image" />
+                  : <span className="category-initial">{cat.name.charAt(0)}</span>
+                }
                 <h3>{cat.name}</h3>
                 <p>{cat.description}</p>
               </Link>
