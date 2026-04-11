@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { products, categories } from '../data/products'
 import ProductCard from '../components/ProductCard'
+import { usePanier } from '../context/PanierContext'
 import './Products.css'
 
 const SORT_OPTIONS = [
@@ -13,6 +14,8 @@ const SORT_OPTIONS = [
 ]
 
 export default function Products() {
+  const { addToPanier } = usePanier();
+
   const [searchParams, setSearchParams] = useSearchParams()
   const [search, setSearch] = useState(searchParams.get('search') || '')
   const [sort, setSort] = useState('default')
@@ -90,11 +93,11 @@ export default function Products() {
 
           <div className="filter-group">
             <label className="filter-label">Prix max : {priceMax} DT</label>
-            <input type="range" min={5} max={100} value={priceMax} onChange={e => setPriceMax(Number(e.target.value))} className="price-range" />
-            <div className="price-labels"><span>5 DT</span><span>100 DT</span></div>
+            <input type="range" min={5} max={500} value={priceMax} onChange={e => setPriceMax(Number(e.target.value))} className="price-range" />
+            <div className="price-labels"><span>5 DT</span><span>500 DT</span></div>
           </div>
 
-          <button className="btn btn-ghost btn-sm" onClick={() => { setSearch(''); setPriceMax(100); setCategory('') }}>
+          <button className="btn btn-ghost btn-sm" onClick={() => { setSearch(''); setPriceMax(500); setCategory('') }}>
             Réinitialiser
           </button>
         </aside>
@@ -118,7 +121,7 @@ export default function Products() {
             </div>
           ) : (
             <div className="products-grid-main">
-              {filtered.map(product => <ProductCard key={product.id} product={product} />)}
+              {filtered.map(product => <ProductCard key={product.id} product={product} onAddToPanier={addToPanier} />)}
             </div>
           )}
         </div>

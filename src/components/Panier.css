@@ -1,0 +1,340 @@
+/* ── Page wrapper ── */
+.panier-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+  min-height: 60vh;
+}
+
+/* ── Page header ── */
+.panier-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 32px;
+  border-bottom: 2px solid #f3f4f6;
+  padding-bottom: 16px;
+}
+
+.panier-header h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+}
+
+.panier-count {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* ── Empty state ── */
+.panier-empty {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.panier-empty-icon {
+  font-size: 72px;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.panier-empty h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 10px;
+}
+
+.panier-empty p {
+  font-size: 15px;
+  color: #6b7280;
+  margin: 0 0 28px;
+}
+
+/* ── Two-column layout ── */
+.panier-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 32px;
+  align-items: start;
+}
+
+/* ── Items list ── */
+.panier-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panier-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  transition: box-shadow 0.2s;
+}
+
+.panier-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+.panier-item-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background: #f9fafb;
+}
+
+.panier-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.panier-item-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.4;
+  margin: 0 0 6px;
+}
+
+.panier-item-price {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* ── Quantity controls ── */
+.panier-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.qty-btn {
+  background: #f9fafb;
+  border: none;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.qty-btn:hover {
+  background: #3aaa35;
+  color: white;
+}
+
+.qty-value {
+  width: 36px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* ── Item subtotal ── */
+.panier-item-total {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: 100px;
+  text-align: right;
+  margin: 0;
+}
+
+/* ── Remove button ── */
+.panier-item-remove {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
+}
+
+.panier-item-remove:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+/* ── Bottom action bar ── */
+.panier-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.btn-continuer {
+  font-size: 14px;
+  font-weight: 600;
+  color: #3aaa35;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.btn-continuer:hover {
+  color: #2d8a29;
+  text-decoration: underline;
+}
+
+.btn-vider {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ef4444;
+  background: none;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-vider:hover {
+  background: #fee2e2;
+  border-color: #ef4444;
+}
+
+/* ── Summary card ── */
+.panier-summary {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  position: sticky;
+  top: 20px;
+}
+
+.panier-summary h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 20px;
+}
+
+.summary-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.summary-line span:last-child {
+  font-weight: 600;
+  color: #374151;
+  white-space: nowrap;
+}
+
+.summary-divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 16px 0;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.summary-shipping {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.btn-commander {
+  width: 100%;
+  padding: 14px;
+  background: #3aaa35;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-commander:hover {
+  background: #2d8a29;
+  transform: translateY(-1px);
+}
+
+.btn-commander:active {
+  transform: translateY(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .panier-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .panier-summary {
+    position: static;
+  }
+
+  .panier-item {
+    flex-wrap: wrap;
+  }
+
+  .panier-item-info {
+    flex: 1 1 calc(100% - 96px);
+  }
+
+  .panier-item-total {
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .panier-header h1 {
+    font-size: 22px;
+  }
+
+  .panier-item-img {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -31,6 +31,8 @@ export default function Footer() {
               <li><Link to="/products?category=health-care">Health Care</Link></li>
               <li><Link to="/products?category=baby-care">Mom & Baby</Link></li>
               <li><Link to="/products?category=sun-care">Sun Care</Link></li>
+              <li><Link to="/products?category=orthopedics">Orthopédie</Link></li>
+              <li><Link to="/products?category=hair-care">Hair Care</Link></li>
             </ul>
           </div>
 
@@ -40,7 +42,6 @@ export default function Footer() {
               <li>📍 <a href="https://maps.google.com/?q=Rue+14+Janvier+Rond+point+Zarrouk" target="_blank" rel="noopener noreferrer">Rue 14 Janvier, Zarrouk</a></li>
               <li>📞 +216 29 438 826</li>
               <li>✉️ para.pharmafamily@gmail.com</li>
-              <li>🕐 Lun–Sam : 9h – 19h</li>
             </ul>
           </div>
         </div>

@@ -50,8 +50,11 @@
 .search-btn:hover { background: #2d8a29; }
 
 .header-icons { display: flex; align-items: center; gap: 8px; margin-left: auto; }
-.header-icon { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px; color: #374151; text-decoration: none; transition: background 0.2s, color 0.2s; }
+.header-icon { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px; color: #374151; text-decoration: none; transition: background 0.2s, color 0.2s; position: relative; }
 .header-icon:hover { background: #f0fdf0; color: #3aaa35; }
+
+.cart-btn { position: relative; }
+.cart-badge { position: absolute; top: 2px; right: 2px; background: #cc0075; color: white; font-size: 10px; font-weight: 700; min-width: 17px; height: 17px; border-radius: 999px; display: flex; align-items: center; justify-content: center; padding: 0 3px; line-height: 1; pointer-events: none; }
 
 .hamburger { display: none; background: none; border: 1px solid #e5e7eb; border-radius: 8px; width: 40px; height: 40px; font-size: 18px; cursor: pointer; color: #374151; align-items: center; justify-content: center; transition: background 0.2s; }
 .hamburger:hover { background: #f9fafb; }

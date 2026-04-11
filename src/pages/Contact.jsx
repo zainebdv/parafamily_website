@@ -34,7 +34,7 @@ export default function Contact() {
 
       <div className="container contact-layout">
 
-        {/* Form */}
+        
         <div className="contact-form-wrapper">
           <h2>Envoyez-nous un message</h2>
           <p className="contact-form-sub">Nous répondons généralement sous 24h les jours ouvrables.</p>
@@ -87,12 +87,12 @@ export default function Contact() {
           )}
         </div>
 
-        {/* Info */}
+       
         <div className="contact-info">
           <h2>Nous trouver</h2>
           {[
             { icon: '📍', title: 'Adresse',   lines: ['Rue 14 Janvier, Rond point Zarrouk', 'Bizerte, Tunisie'] },
-            { icon: '📞', title: 'Téléphone', lines: ['+216 29 438 826', 'Lun–Sam : 9h – 18h'] },
+            { icon: '📞', title: 'Téléphone', lines: ['+216 29 438 826'] },
             { icon: '✉️', title: 'Email',     lines: ['para.pharmafamily@gmail.com'] },
           ].map(info => (
             <div key={info.title} className="info-card card">
