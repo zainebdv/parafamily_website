@@ -94,7 +94,6 @@ export default function Contact() {
             { icon: '📍', title: 'Adresse',   lines: ['Rue 14 Janvier, Rond point Zarrouk', 'Bizerte, Tunisie'] },
             { icon: '📞', title: 'Téléphone', lines: ['+216 29 438 826', 'Lun–Sam : 9h – 18h'] },
             { icon: '✉️', title: 'Email',     lines: ['para.pharmafamily@gmail.com'] },
-            { icon: '🕐', title: 'Horaires',  lines: ['Lun–Ven : 9h – 19h', 'Samedi : 10h – 17h'] },
           ].map(info => (
             <div key={info.title} className="info-card card">
               <span className="info-icon">{info.icon}</span>
