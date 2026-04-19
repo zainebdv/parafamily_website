@@ -1,0 +1,39 @@
+.footer { background: #f8fdf8; border-top: 3px solid #3aaa35; padding: 48px 0 0; }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-logo { display: flex; flex-direction: column; text-decoration: none; line-height: 1; }
+.footer-pharma { font-size: 20px; font-weight: 800; font-style: italic; font-family: Georgia, serif; color: #3aaa35; }
+.footer-family { font-size: 24px; font-weight: 900; font-style: italic; font-family: Georgia, serif; color: #cc0075; }
+
+.footer-brand p { font-size: 14px; line-height: 1.6; color: #6b7280; margin-top: 12px; max-width: 260px; }
+
+.footer-col h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #111827; margin-bottom: 14px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-col ul li a { font-size: 14px; color: #6b7280; text-decoration: none; transition: color 0.2s; }
+.footer-col ul li a:hover { color: #3aaa35; }
+
+.footer-contact li { font-size: 14px; color: #6b7280; display: flex; align-items: flex-start; gap: 8px; }
+.footer-contact li a { color: #6b7280; text-decoration: underline; transition: color 0.2s; }
+.footer-contact li a:hover { color: #3aaa35; }
+
+.footer-bottom { border-top: 1px solid #e5e7eb; padding: 20px 0; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.footer-bottom p { font-size: 13px; color: #9ca3af; }
+.footer-badges { display: flex; gap: 16px; flex-wrap: wrap; }
+.footer-badges span { font-size: 13px; color: #9ca3af; }
+
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-brand p { max-width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; }
+}

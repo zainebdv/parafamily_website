@@ -1,0 +1,76 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  color: #374151;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { color: #111827; }
+
+a { color: #3aaa35; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  border: 2px solid transparent;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-primary { background: #3aaa35; color: white; border-color: #3aaa35; }
+.btn-primary:hover { background: #2d8a29; }
+
+.btn-ghost { background: transparent; color: #374151; border-color: #e5e7eb; }
+.btn-ghost:hover { background: #f9fafb; }
+
+.btn-sm { padding: 7px 14px; font-size: 13px; }
+.btn-lg { padding: 14px 28px; font-size: 16px; }
+
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.badge-green {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  background: rgba(58, 170, 53, 0.1);
+  color: #3aaa35;
+}
+
+.page-hero {
+  background: linear-gradient(135deg, rgba(58,170,53,0.07) 0%, #f9fafb 100%);
+  padding: 48px 0;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.page-hero h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+.page-hero p { font-size: 16px; color: #6b7280; }
+
+@media (max-width: 768px) {
+  .container { padding: 0 16px; }
+  .page-hero h1 { font-size: 26px; }
+}
